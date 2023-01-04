@@ -3,7 +3,7 @@ locals {
 }
 
 variable "project" {
-    description = "dtc-de-learn"
+    description = "ny-rides-franklynes"
 }
 
 variable "region" {
