@@ -3,12 +3,12 @@ locals {
 }
 
 variable "project" {
-    description = "dtc-de-learn"
+    description = "ny-rides-franklynes"
 }
 
 variable "region" {
     description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
-    default = "europe-west6"
+    default = "us-central1"
     type = string
 }
 
