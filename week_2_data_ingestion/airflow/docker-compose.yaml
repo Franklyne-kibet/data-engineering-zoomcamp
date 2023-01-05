@@ -69,7 +69,7 @@ x-airflow-common:
     GCP_GCS_BUCKET: 'dtc_data_lake_ny-rides-franklynes'
 
   volumes:
-    - ./dags:/opt/airflow/dags
+    - ./dags_new:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ~/.google/credentials/:/.google/credentials:ro
