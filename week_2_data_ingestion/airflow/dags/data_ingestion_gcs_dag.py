@@ -17,20 +17,20 @@ PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
 
 
-dataset_file = "yellow_tripdata_2021-01.parquet"
-dataset_url = f"https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet{dataset_file}"
+dataset_file = "yellow_tripdata_2021-01.csv.gz"
+dataset_url = f"https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/{dataset_file}"
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
-parquet_file = dataset_file.replace('.csv', '.parquet')
+parquet_file = dataset_file.replace('.csv.gz', '.parquet')
 BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'trips_data_all')
 
 
 #convert csv to parquet
 def format_to_parquet(src_file):
-    if not src_file.endswith('.parquet'):
+    if not src_file.endswith('.csv.gz'):
         logging.error("Can only accept source files in CSV format, for the moment")
         return
     table = pv.read_csv(src_file)
-    pq.write_table(table, src_file.replace('.csv', '.parquet'))
+    pq.write_table(table, src_file.replace('.csv.gz', '.parquet'))
 
 
 # Upload to cloud
