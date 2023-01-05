@@ -11,6 +11,7 @@ USER airflow
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir pandas sqlalchemy psycopg2-binary
 
 USER root
 
