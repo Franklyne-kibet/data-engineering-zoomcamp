@@ -3,7 +3,15 @@ locals {
 }
 
 variable "project" {
-    description = "ny-rides-franklynes"
+    description = "taxi-rides-ny"
+}
+
+variable "access_key_id" {
+    description = "AWS access key for transfer service"
+}
+
+variable "aws_secret_key" {
+    description = "AWS secret for transfer service"
 }
 
 variable "region" {
