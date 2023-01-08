@@ -20,7 +20,7 @@ PG_DATABASE = os.getenv('PG_DATABASE')
 local_workflow = DAG(
     "LocalIngestionDag",
     schedule_interval = "0 6 2 * *",
-    start_date = datetime(2021,1,1)
+    start_date = datetime(2022,1,1)
 )
 
 
