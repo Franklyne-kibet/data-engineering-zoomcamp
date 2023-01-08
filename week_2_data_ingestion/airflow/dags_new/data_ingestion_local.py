@@ -20,14 +20,14 @@ PG_DATABASE = os.getenv('PG_DATABASE')
 local_workflow = DAG(
     "LocalIngestionDag",
     schedule_interval = "0 6 2 * *",
-    start_date = datetime(2022,10,1)
+    start_date = datetime(2021,1,1)
 )
 
 
 
 URL_PREFIX = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow'
 URL_TEMPLATE = URL_PREFIX + '/yellow_tripdata_{{ execution_date.strftime(\'%Y-%m\') }}.csv.gz'
-OUTPUT_FILE_TEMPLATE = AIRFLOW_HOME + '/yellow_tripdata_{{ execution_date.strftime(\'%Y-%m\') }}.csv.gz'
+OUTPUT_FILE_TEMPLATE = AIRFLOW_HOME + '/yellow_tripdata_{{ execution_date.strftime(\'%Y-%m\') }}.gz'
 TABLE_NAME_TEMPLATE = 'yellow_taxi_{{ execution_date.strftime(\'%Y_%m\') }}'
 
 with local_workflow:
