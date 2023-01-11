@@ -66,7 +66,7 @@ with DAG(
         )
         #Query
         CREATE_BQ_TBL_QUERY = (
-            f"CREATE OR REPLACE TABLE {BIGQUERY_DATASET}.{colour}_{DATASET} \
+            f"CREATE OR REPLACE TABLE {BIGQUERY_DATASET}.{colour}_{DATASET}_partitioned \
             PARTITION BY DATE({ds_col})\
             AS \
             SELECT * FROM {BIGQUERY_DATASET}.{colour}_{DATASET}_external_table;\
