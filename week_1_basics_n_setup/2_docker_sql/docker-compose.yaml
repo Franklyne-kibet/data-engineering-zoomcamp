@@ -20,6 +20,7 @@ services:
       [8080:80] #[8081:80]
 
 
+<<<<<<< Updated upstream
 # # networks:
 # #   airflow:
 # #     external:
