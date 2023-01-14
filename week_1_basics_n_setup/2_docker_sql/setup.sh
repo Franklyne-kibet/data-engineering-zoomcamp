@@ -61,7 +61,7 @@ python ingest_data.py \
 
 docker build -t taxi_ingest:v001 .
 
-#run it in the network (host-localhost / pg-database)
+#run it in the network (host-localhost / pg-database) or kubernetes
 docker run -it \
     --network=pg-network \
     taxi_ingest:v001 \
