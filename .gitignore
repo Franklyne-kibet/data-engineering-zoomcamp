@@ -13,4 +13,3 @@ serving_dir
 *.csv
 .ipynb_checkpoints/
 *.gz
-**/week_1/
