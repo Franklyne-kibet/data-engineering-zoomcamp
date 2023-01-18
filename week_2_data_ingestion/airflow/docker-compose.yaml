@@ -65,8 +65,8 @@ x-airflow-common:
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud-platform://?extra__google_cloud_platform__key_path=/.google/credentials/google_credentials.json'
 
     # TODO
-    GCP_PROJECT_ID: 'ny-rides-franklynes'
-    GCP_GCS_BUCKET: 'dtc_data_lake_ny-rides-franklynes'
+    GCP_PROJECT_ID: 'ny-rides-franklyne'
+    GCP_GCS_BUCKET: 'dtc_data_lake_ny-rides-franklyne'
 
     #logins
     PG_HOST: "${PG_HOST}"
