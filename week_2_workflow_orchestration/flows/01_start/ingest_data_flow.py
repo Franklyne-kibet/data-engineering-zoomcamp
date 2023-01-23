@@ -61,4 +61,4 @@ def main_flow(table_name: str = "yellow_taxi_trips"):
     load_data(table_name, data)
 
 if __name__ == '__main__':
-    main_flow(table_name= "yellow_trips")
+    main_flow(table_name= "yellow_taxi_trips")

@@ -1,0 +1,5 @@
+pandas
+prefect-gcp[cloud_storage]==0.2.4
+protobuf
+pyarrow
+pandas-gbq
