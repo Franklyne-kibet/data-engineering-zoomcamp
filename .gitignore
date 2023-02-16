@@ -16,3 +16,4 @@ serving_dir
 *.parquet
 *-deployment.yaml
 *.json
+**/fhvhv
