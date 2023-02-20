@@ -18,3 +18,5 @@ serving_dir
 *.json
 **/fhvhv
 **/data/*
+**/tmp/*
+**/zones/*
