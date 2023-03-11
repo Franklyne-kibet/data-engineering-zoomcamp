@@ -68,7 +68,9 @@ class RideAvroProducer:
             try:
                 self.producer.produce(topic=topic,
                                       key=self.key_serializer(key, SerializationContext(topic=topic,field=MessageField.KEY)),
+                                      
                                       value=self.value_serializer(value, SerializationContext(topic=topic,field=MessageField.VALUE)),
+                                      
                                       on_delivery=delivery_report)
             except KeyboardInterrupt:
                 break
